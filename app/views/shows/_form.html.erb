@@ -1,0 +1,67 @@
+<%= form_with(model: show, local: true) do |form| %>
+  <% if show.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(show.errors.count, "error") %> prohibited this show from being saved:</h2>
+
+      <ul>
+        <% show.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :streetAddress1 %>
+    <%= form.text_field :streetAddress1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :streetAddress2 %>
+    <%= form.text_field :streetAddress2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateOfShow %>
+    <%= form.datetime_select :dateOfShow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :locationURL %>
+    <%= form.text_field :locationURL %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imageLocation %>
+    <%= form.text_field :imageLocation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

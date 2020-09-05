@@ -1,0 +1,17 @@
+<% if @currentUser %>
+	<%= render 'layouts/admin_header' %>
+<% end %>
+<div class="header">
+	<div class="header-title">
+		<h1>Barefoot Nina</h1>
+	</div>
+
+	<ul class="nav">
+		<li><%= link_to "Home", root_path %></li>
+		<li><%= link_to "Member Bios", members_path %></li>
+		<li><%= link_to "Music Samples", root_path %></li>
+		<li><%= link_to "Photos", root_path %></li>
+		<li><%= link_to "Book Us!", root_path %></li>
+	</ul>
+</div>
+<div class="clear"></div>	

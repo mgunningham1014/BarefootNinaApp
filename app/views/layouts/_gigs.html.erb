@@ -1,0 +1,19 @@
+<div class="gigs">
+	<h1>Upcoming Gigs</h1>
+	<% @shows.each do |show| %>
+		<div class="ind-gig">
+			<h3><%= show.title %></h3>
+			<a href=<%= show.locationURL %>><%= show.location %></a><br>
+			<span class="date"><%= show.dateOfShow %></span>
+			<% if @currentUser %>
+	          <td><%= link_to 'Show', show %></td>
+	          <td><%= link_to 'Edit', edit_show_path(show) %></td>
+	          <td><%= link_to 'Delete', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	        <% end %>
+		</div>
+	<% end %>
+
+	<%if @currentUser %>
+	  <%= link_to 'New Show', new_show_path %>
+	<% end %>
+</div>

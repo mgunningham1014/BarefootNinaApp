@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @show.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @show.location %>
+</p>
+
+<p>
+  <strong>Streetaddress1:</strong>
+  <%= @show.streetAddress1 %>
+</p>
+
+<p>
+  <strong>Streetaddress2:</strong>
+  <%= @show.streetAddress2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @show.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @show.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @show.zipcode %>
+</p>
+
+<p>
+  <strong>Dateofshow:</strong>
+  <%= @show.dateOfShow %>
+</p>
+
+<p>
+  <strong>Locationurl:</strong>
+  <%= @show.locationURL %>
+</p>
+
+<p>
+  <strong>Imagelocation:</strong>
+  <%= @show.imageLocation %>
+</p>
+
+<%= link_to 'Edit', edit_show_path(@show) %> |
+<%= link_to 'Back', shows_path %>
